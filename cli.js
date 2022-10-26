@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const cp = require('child_process');
 resumeDetails();
-function resumeDetails(){
+function resumeDetails() {
     inquirer
         .prompt([
             {
@@ -28,21 +28,21 @@ Enthusiastic in Open Source Contribution.`);
 
 }
 
-function displayGoback(){
+function displayGoback() {
     inquirer
         .prompt([
             {
                 type: 'list',
                 name: 'selection',
-                choices: ['Go-Back' ,'Exit']
+                choices: ['Go-Back', 'Exit']
             }
         ])
-    .then((answer) =>{
-        if (answer.selection == 'Go-Back')
-          resumeDetails();
-          else{
-            console.log('resume is closed');
-          }
-    })
-        
+        .then((answer) => {
+            if (answer.selection == 'Go-Back')
+                resumeDetails();
+            else {
+                console.log('resume is closed');
+            }
+        })
+
 }
